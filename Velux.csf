@@ -1,0 +1,470 @@
+// In the first line of this script :
+//   -  Use Ccf command to activate PRONTO STANDARD compilation mode
+//   -  Use CcfPro command to activate PRONTO PRO compilation mode
+//   -  Use CcfRC5200 command to activate MARANTZ RC5200 compilation mode
+//   -  Use CcfRC9200 command to activate MARANTZ RC9200 compilation mode
+
+Ccf("Paul W V3.1")
+{
+  Home("HOME")
+  {
+    LeftKey("All Off")
+    {
+      Delay(300);
+      RawCode("RC5 0 0","0000 0067 0000 0010 0060 0019 0030 0018 0030 0018 0030 0018 0018 0019 0030 0018 0030 0018 0018 0018 0018 0019 0018 0019 0030 0018 0018 0018 0018 0018 0018 0018 0018 0018 0018 034b");
+      Delay(300);
+    }
+  }
+
+  Device("Skylight")
+  {
+    Panel("skylight1")
+    {
+      Font(0);
+      BackColor(LightGray);
+      TextColor(Black);
+      InactiveUnselectedColor(Black,White);
+      InactiveSelectedColor(Black,White);
+      ActiveUnselectedColor(Black,White);
+      ActiveSelectedColor(Black,White);
+
+      Frame("Skylight",69,1,170,19)
+      {
+        Font(8);
+        BackColor(Black);
+        TextColor(White);
+      }
+
+      Button("Remotes",1,1,70,19,1) // Button 1 : Device : "Skylight"   Panel : "skylight1"
+      {
+        InactiveUnselectedColor(Black,Black);
+        ActiveUnselectedColor(Black,Black);
+        UnselectedIcons("Velux_bmp\icon0000.bmp");
+        SelectedIcons("Velux_bmp\icon0001.bmp");
+      }
+
+      Button("M1 - Down Auto",35,170,27,29,2) // Button 2 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 0284 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 122e");
+        }
+      }
+
+      Button("m1\x86",30,107,37,25,3) // Button 3 : Device : "Skylight"   Panel : "skylight1"
+      {
+        Font(8);
+        InactiveUnselectedColor(Black,DarkGray);
+        InactiveSelectedColor(Black,DarkGray);
+        ActiveUnselectedColor(Black,DarkGray);
+        ActiveSelectedColor(Black,DarkGray);
+        UnselectedIcons("Velux_bmp\icon0004.bmp");
+        SelectedIcons("Velux_bmp\icon0005.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 0269 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 1213");
+        }
+      }
+
+      Button("M1 - UP Auto",35,45,27,29,4) // Button 4 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 026a 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 1211");
+        }
+      }
+
+      Button("M2 Up Auto",105,45,27,29,5) // Button 5 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 0283 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 122d");
+        }
+      }
+
+      Button("m2\x86",100,107,37,25,6) // Button 6 : Device : "Skylight"   Panel : "skylight1"
+      {
+        Font(10);
+        InactiveUnselectedColor(Black,DarkGray);
+        InactiveSelectedColor(Black,DarkGray);
+        ActiveUnselectedColor(Black,DarkGray);
+        ActiveSelectedColor(Black,DarkGray);
+        UnselectedIcons("Velux_bmp\icon0004.bmp");
+        SelectedIcons("Velux_bmp\icon0005.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0283 0028 000c 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 122f");
+        }
+      }
+
+      Button("M2 - Down Auto",105,170,27,29,7) // Button 7 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 026a 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 1212");
+        }
+      }
+
+      Button("M3 Down Auto",175,170,27,29,8) // Button 8 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 026b 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 1214");
+        }
+      }
+
+      Button("M3 Up Auto",175,45,27,29,9) // Button 9 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0284 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 122d");
+        }
+      }
+
+      Button("M3\x86",170,107,37,25,10) // Button 10 : Device : "Skylight"   Panel : "skylight1"
+      {
+        Font(8);
+        InactiveUnselectedColor(Black,DarkGray);
+        InactiveSelectedColor(Black,DarkGray);
+        ActiveUnselectedColor(Black,DarkGray);
+        ActiveSelectedColor(Black,DarkGray);
+        UnselectedIcons("Velux_bmp\icon0004.bmp");
+        SelectedIcons("Velux_bmp\icon0005.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 0283 0028 000c 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 122f");
+        }
+      }
+
+      Frame("Motor 1",7,22,87,19)
+      {
+        Font(10);
+        Icon("Velux_bmp\icon0008.bmp");
+      }
+
+      Frame("Motor 3",145,22,87,19)
+      {
+        Font(10);
+        Icon("Velux_bmp\icon0008.bmp");
+      }
+
+      Frame("Motor 2",73,199,87,19)
+      {
+        Font(10);
+        Icon("Velux_bmp\icon0008.bmp");
+      }
+
+      Button("M1 Up Manual",35,78,27,29,11) // Button 11 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 0269 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 1213");
+        }
+      }
+
+      Button("M2 up Manual",105,78,27,29,12) // Button 12 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0284 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 122c");
+        }
+      }
+
+      Button("M3 Up Manual",175,78,27,29,13) // Button 13 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0283 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 122d");
+        }
+      }
+
+      Button("M1 Down Manual",35,137,27,29,14) // Button 14 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0284 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 122e");
+        }
+      }
+
+      Button("M2 Down Manual",105,137,27,29,15) // Button 15 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 026b 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 1213");
+        }
+      }
+
+      Button("M3 Down Manual",175,137,27,29,16) // Button 16 : Device : "Skylight"   Panel : "skylight1"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0018 0030 0027 000d 000d 0027 000d 0027 0027 000d 000d 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 1214 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 026a 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 1213");
+        }
+      }
+    }
+
+    Panel("skylight All")
+    {
+      Font(0);
+      BackColor(LightGray);
+      TextColor(Black);
+      InactiveUnselectedColor(Black,White);
+      InactiveSelectedColor(Black,White);
+      ActiveUnselectedColor(Black,White);
+      ActiveSelectedColor(Black,White);
+
+      Frame("Skylight",69,1,170,19)
+      {
+        Font(8);
+        BackColor(Black);
+        TextColor(White);
+      }
+
+      Button("Remotes",1,1,70,19,17) // Button 17 : Device : "Skylight"   Panel : "skylight All"
+      {
+        InactiveUnselectedColor(Black,Black);
+        ActiveUnselectedColor(Black,Black);
+        UnselectedIcons("Velux_bmp\icon0000.bmp");
+        SelectedIcons("Velux_bmp\icon0001.bmp");
+      }
+
+      Button("M1 - Down Auto",35,170,27,29,18) // Button 18 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 026a 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 1214");
+        }
+      }
+
+      Button("m1\x86",30,107,37,25,19) // Button 19 : Device : "Skylight"   Panel : "skylight All"
+      {
+        Font(8);
+        InactiveUnselectedColor(Black,DarkGray);
+        InactiveSelectedColor(Black,DarkGray);
+        ActiveUnselectedColor(Black,DarkGray);
+        ActiveSelectedColor(Black,DarkGray);
+        UnselectedIcons("Velux_bmp\icon0004.bmp");
+        SelectedIcons("Velux_bmp\icon0005.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0284 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 122e");
+        }
+      }
+
+      Button("M1 - UP Auto",35,45,27,29,20) // Button 20 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0284 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 122c");
+        }
+      }
+
+      Button("M2 Up Auto",105,45,27,29,21) // Button 21 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 026a 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 1213");
+        }
+      }
+
+      Button("m2\x86",100,107,37,25,22) // Button 22 : Device : "Skylight"   Panel : "skylight All"
+      {
+        Font(10);
+        InactiveUnselectedColor(Black,DarkGray);
+        InactiveSelectedColor(Black,DarkGray);
+        ActiveUnselectedColor(Black,DarkGray);
+        ActiveSelectedColor(Black,DarkGray);
+        UnselectedIcons("Velux_bmp\icon0004.bmp");
+        SelectedIcons("Velux_bmp\icon0005.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 0269 0028 000c 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 1215");
+        }
+      }
+
+      Button("M2 - Down Auto",105,170,27,29,23) // Button 23 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0283 000e 0026 0028 000c 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 122d");
+        }
+      }
+
+      Button("M3 Down Auto",175,170,27,29,24) // Button 24 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0284 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 122e");
+        }
+      }
+
+      Button("M3 Up Auto",175,45,27,29,25) // Button 25 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 026a 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 0028 1213");
+        }
+      }
+
+      Button("M3\x86",170,107,37,25,26) // Button 26 : Device : "Skylight"   Panel : "skylight All"
+      {
+        Font(8);
+        InactiveUnselectedColor(Black,DarkGray);
+        InactiveSelectedColor(Black,DarkGray);
+        ActiveUnselectedColor(Black,DarkGray);
+        ActiveSelectedColor(Black,DarkGray);
+        UnselectedIcons("Velux_bmp\icon0004.bmp");
+        SelectedIcons("Velux_bmp\icon0005.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 0269 0028 000c 000e 0026 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 0028 1214");
+        }
+      }
+
+      Frame("Motor 1",7,22,87,19)
+      {
+        Font(10);
+        Icon("Velux_bmp\icon0008.bmp");
+      }
+
+      Frame("Motor 3",145,22,87,19)
+      {
+        Font(10);
+        Icon("Velux_bmp\icon0008.bmp");
+      }
+
+      Frame("Motor 2",73,199,87,19)
+      {
+        Font(10);
+        Icon("Velux_bmp\icon0008.bmp");
+      }
+
+      Button("M1 Up Manual",35,78,27,29,27) // Button 27 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0284 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 122d");
+        }
+      }
+
+      Button("M2 up Manual",105,78,27,29,28) // Button 28 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 026a 000e 0026 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 1213");
+        }
+      }
+
+      Button("M3 Up Manual",175,78,27,29,29) // Button 29 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0006.bmp");
+        SelectedIcons("Velux_bmp\icon0007.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 000e 0027 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 026a 000e 0026 0028 000c 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 1213");
+        }
+      }
+
+      Button("M1 Down Manual",35,137,27,29,30) // Button 30 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 026a 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 0028 1214");
+        }
+      }
+
+      Button("M2 Down Manual",105,137,27,29,31) // Button 31 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 0283 0028 000c 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0026 000e 122d");
+        }
+      }
+
+      Button("M3 Down Manual",175,137,27,29,32) // Button 32 : Device : "Skylight"   Panel : "skylight All"
+      {
+        UnselectedIcons("Velux_bmp\icon0002.bmp");
+        SelectedIcons("Velux_bmp\icon0003.bmp");
+
+        Action()
+        {
+          RawCode("Learned","0000 0081 0000 0030 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 0284 0028 000c 000e 0026 000e 0026 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 000e 0026 0028 000c 0028 000c 0028 000c 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 000e 0026 0028 000c 0028 000c 000e 122d");
+        }
+      }
+    }
+  }
+}
+
